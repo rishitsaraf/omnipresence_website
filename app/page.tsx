@@ -506,8 +506,8 @@ export default function LandingPage() {
               {[
                 {
                   name: "Anuj Chokhani",
-                  role: "CEO & Co-Founder",
-                  bio: "Executive with 15+ years of experience in manufacturing and exports.",
+                  role: "CEO Kuloday",
+                  bio: "Executive with 15+ years of experience in manufacturing and exports leading sales and marketing in Asia's largest polymer manifacturing company.",
                   image: "/anuj.png",
                   linkedin: "https://www.linkedin.com/in/anuj-chokhani-a008474/",
                 },
@@ -519,9 +519,9 @@ export default function LandingPage() {
                   linkedin: "https://www.linkedin.com/in/rishit-saraf/",
                 },
                 {
-                  name: "John Doe",
-                  role: "Senior Backend Engineer",
-                  bio: "Could be you.",
+                  name: "Ankit Chokhani",
+                  role: "CFO Kuloday",
+                  bio: "CFO with 15+ years of experience in manufacturing and exports leading finance in Asia's largest polymer manifacturing company.",
                   image: "",
                   linkedin: "#",
                 },

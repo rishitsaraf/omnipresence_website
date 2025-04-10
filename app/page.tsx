@@ -516,7 +516,7 @@ export default function LandingPage() {
                   role: "CFO Kuloday",
                   bio: "CFO with 15+ years of experience in manufacturing and exports.",
                   image: "/ankit.png",
-                  linkedin: "#",
+                  linkedin: "https://www.linkedin.com/in/ankit-chokhani-1baa729/",
                 },
                 {
                   name: "Rishit Saraf",
@@ -527,7 +527,7 @@ export default function LandingPage() {
                 },
                 {
                   name: "john Doe",
-                  role: "Senior Frontend Engineer",
+                  role: "Senior Backend Engineer",
                   bio: "Could be you.",
                   image: "",
                   linkedin: "#",

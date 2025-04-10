@@ -522,7 +522,7 @@ export default function LandingPage() {
                   name: "Ankit Chokhani",
                   role: "CFO Kuloday",
                   bio: "CFO with 15+ years of experience in manufacturing and exports leading finance in Asia's largest polymer manifacturing company.",
-                  image: "",
+                  image: "/ankit.png",
                   linkedin: "#",
                 },
                 {

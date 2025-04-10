@@ -512,18 +512,18 @@ export default function LandingPage() {
                   linkedin: "https://www.linkedin.com/in/anuj-chokhani-a008474/",
                 },
                 {
-                  name: "Rishit Saraf",
-                  role: "CTO & Co-Founder",
-                  bio: "Business Analyst and engineer with a background in developing scalable cloud solutions.",
-                  image: "/rishit.png",
-                  linkedin: "https://www.linkedin.com/in/rishit-saraf/",
-                },
-                {
                   name: "Ankit Chokhani",
                   role: "CFO Kuloday",
                   bio: "CFO with 15+ years of experience in manufacturing and exports.",
                   image: "/ankit.png",
                   linkedin: "#",
+                },
+                {
+                  name: "Rishit Saraf",
+                  role: "CTO & Co-Founder",
+                  bio: "Business Analyst and engineer with a background in developing scalable cloud solutions.",
+                  image: "/rishit.png",
+                  linkedin: "https://www.linkedin.com/in/rishit-saraf/",
                 },
                 {
                   name: "john Doe",

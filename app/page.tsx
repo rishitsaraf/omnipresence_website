@@ -1102,13 +1102,13 @@ export default function LandingPage() {
               &copy; {new Date().getFullYear()} Omnipresence. All rights reserved.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+              <a href="https://www.freeprivacypolicy.com/live/359acacd-a8c1-42bc-9345-17ec85c4473f" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+              <a href="https://www.freeprivacypolicy.com/live/2165b82f-54af-43b7-9122-19fce53a5e9d" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
                 Terms of Service
               </a>
-              <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+              <a href="https://www.freeprivacypolicy.com/live/359acacd-a8c1-42bc-9345-17ec85c4473f" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
                 Cookie Policy
               </a>
             </div>

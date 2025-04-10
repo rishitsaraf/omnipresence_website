@@ -31,6 +31,7 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { useTheme } from "next-themes"
+import { Analytics } from "@vercel/analytics/react"
 
 export default function LandingPage() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -128,6 +129,7 @@ export default function LandingPage() {
 
   return (
     <div className="flex min-h-[100dvh] flex-col">
+      <Analytics />
       <header
         className={`sticky top-0 z-50 w-full backdrop-blur-lg transition-all duration-300 ${isScrolled ? "bg-background/80 shadow-sm" : "bg-transparent"}`}
       >

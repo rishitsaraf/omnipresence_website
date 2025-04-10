@@ -1090,7 +1090,7 @@ export default function LandingPage() {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                  <a href="https://www.freeprivacypolicy.com/live/2165b82f-54af-43b7-9122-19fce53a5e9d" className="text-muted-foreground hover:text-foreground transition-colors">
                     Terms of Service
                   </a>
                 </li>

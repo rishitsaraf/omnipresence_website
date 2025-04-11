@@ -527,13 +527,7 @@ export default function LandingPage() {
                   image: "/rishit.png",
                   linkedin: "https://www.linkedin.com/in/rishit-saraf/",
                 },
-                {
-                  name: "john Doe",
-                  role: "Senior Backend Engineer",
-                  bio: "Could be you.",
-                  image: "",
-                  linkedin: "#",
-                },
+                
               ].map((member, i) => (
                 <motion.div
                   key={i}

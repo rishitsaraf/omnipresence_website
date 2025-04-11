@@ -32,6 +32,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { useTheme } from "next-themes"
 import { Analytics } from "@vercel/analytics/react"
+import { HiringBanner } from "@/components/ui/hiring-banner"
 
 export default function LandingPage() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -130,6 +131,7 @@ export default function LandingPage() {
   return (
     <div className="flex min-h-[100dvh] flex-col">
       <Analytics />
+      <HiringBanner />
       <header
         className={`sticky top-0 z-50 w-full backdrop-blur-lg transition-all duration-300 ${isScrolled ? "bg-background/80 shadow-sm" : "bg-transparent"}`}
       >
@@ -192,9 +194,9 @@ export default function LandingPage() {
               href={jobOpeningsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-medium text-primary transition-colors hover:text-primary/80 flex items-center gap-1"
+              className="inline-flex items-center justify-center rounded-full border border-red-500 px-4 py-1.5 text-sm font-medium text-red-500 transition-colors hover:bg-red-500 hover:text-white"
             >
-              <Briefcase className="size-4" />
+              <Briefcase className="mr-1.5 size-4" />
               We're Hiring
             </a>
           </nav>
@@ -263,9 +265,9 @@ export default function LandingPage() {
                 href={jobOpeningsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="py-2 text-sm font-medium text-primary flex items-center gap-1"
+                className="inline-flex items-center justify-center rounded-full border border-red-500 px-4 py-1.5 text-sm font-medium text-red-500 transition-colors hover:bg-red-500 hover:text-white"
               >
-                <Briefcase className="size-4" />
+                <Briefcase className="mr-1.5 size-4" />
                 We're Hiring
               </a>
               <div className="flex flex-col gap-2 pt-2 border-t">

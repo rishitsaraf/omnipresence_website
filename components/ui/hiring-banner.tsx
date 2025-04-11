@@ -10,7 +10,7 @@ export function HiringBanner() {
 
   useEffect(() => {
     // Check if banner was previously closed
-    const wasClosed = localStorage.getItem("hiringBannerClosed")
+    const wasClosed = sessionStorage.getItem("hiringBannerClosed")
     if (!wasClosed) {
       setIsVisible(true)
     }
@@ -18,7 +18,7 @@ export function HiringBanner() {
 
   const handleClose = () => {
     setIsVisible(false)
-    localStorage.setItem("hiringBannerClosed", "true")
+    sessionStorage.setItem("hiringBannerClosed", "true")
   }
 
   return (

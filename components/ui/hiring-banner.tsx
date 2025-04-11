@@ -34,7 +34,7 @@ export function HiringBanner() {
           <div className="container mx-auto px-4 py-3">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
-                <span className="font-medium">🚀 We're Hiring!</span>
+                <span className="font-medium">🚀 We're Hiring for Engineers!</span>
                 <span>Full-time Backend Engineer</span>
               </div>
               <div className="flex items-center gap-4">

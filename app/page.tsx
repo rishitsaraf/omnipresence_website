@@ -351,7 +351,7 @@ export default function LandingPage() {
             >
               <div className="rounded-xl overflow-hidden shadow-2xl border border-border/40 bg-gradient-to-b from-background to-muted/20">
                 <Image
-                  src="/hero.png"
+                  src="/hero.avif"
                   width={1280}
                   height={720}
                   alt="Omnipresence dashboard"
@@ -510,21 +510,21 @@ export default function LandingPage() {
                   name: "Anuj Chokhani",
                   role: "CEO Kuloday",
                   bio: "Executive with 15+ years of experience in manufacturing and exports.",
-                  image: "/anuj.png",
+                  image: "/anuj.avif",
                   linkedin: "https://www.linkedin.com/in/anuj-chokhani-a008474/",
                 },
                 {
                   name: "Ankit Chokhani",
                   role: "CFO Kuloday",
                   bio: "CFO with 15+ years of experience in manufacturing and exports.",
-                  image: "/ankit.png",
+                  image: "/ankit.avif",
                   linkedin: "https://www.linkedin.com/in/ankit-chokhani-1baa729/",
                 },
                 {
                   name: "Rishit Saraf",
                   role: "CTO & Co-Founder",
                   bio: "Business Analyst and engineer with a background in developing scalable cloud solutions.",
-                  image: "/rishit.png",
+                  image: "/rishit.avif",
                   linkedin: "https://www.linkedin.com/in/rishit-saraf/",
                 },
                 

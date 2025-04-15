@@ -44,7 +44,7 @@ export function HiringBanner() {
                   className="bg-white text-red-500 hover:bg-white/90"
                   onClick={() => window.open("https://proud-drizzle-19a.notion.site/Senior-Backend-Engineer-Core-Team-1c585312744d8038910fe2ab3c05f6d1?pvs=74", "_blank")}
                 >
-                  Apply Now
+                  View Job 
                 </Button>
                 <button
                   onClick={handleClose}

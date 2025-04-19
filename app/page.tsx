@@ -142,7 +142,7 @@ export default function LandingPage() {
             </div>
             <span>Omnipresence</span>
           </div>
-          <nav className="hidden md:flex gap-8">
+          <nav className="hidden lg:flex gap-8">
             <a
               href="#about"
               onClick={(e) => scrollToSection(e, "about")}
@@ -200,7 +200,7 @@ export default function LandingPage() {
               We're Hiring
             </a>
           </nav>
-          <div className="hidden md:flex gap-4 items-center">
+          <div className="hidden lg:flex gap-4 items-center">
             <Button variant="ghost" size="icon" onClick={toggleTheme} className="rounded-full">
               {mounted && theme === "dark" ? <Sun className="size-[18px]" /> : <Moon className="size-[18px]" />}
               <span className="sr-only">Toggle theme</span>
@@ -220,7 +220,7 @@ export default function LandingPage() {
               </a>
             </Button>
           </div>
-          <div className="flex items-center gap-4 md:hidden">
+          <div className="flex items-center gap-4 lg:hidden">
             <Button variant="ghost" size="icon" onClick={toggleTheme} className="rounded-full">
               {mounted && theme === "dark" ? <Sun className="size-[18px]" /> : <Moon className="size-[18px]" />}
             </Button>
@@ -408,7 +408,7 @@ export default function LandingPage() {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -454,7 +454,7 @@ export default function LandingPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="relative"
+                className="relative hidden lg:block"
               >
                 <div className="aspect-square rounded-2xl overflow-hidden shadow-xl border border-border/40 bg-gradient-to-b from-background to-muted/20">
                   <Image
@@ -487,9 +487,9 @@ export default function LandingPage() {
               <Badge variant="secondary">
                 Our Team
               </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Meet the Visionaries</h2>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Meet the team</h2>
               <p className="max-w-[800px] text-muted-foreground md:text-lg">
-                The talented individuals behind Omnipresence who are passionate about transforming how businesses
+                Individuals behind Omnipresence who are passionate about transforming how businesses
                 operate.
               </p>
               <a
@@ -504,7 +504,7 @@ export default function LandingPage() {
               </a>
             </motion.div>
 
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-8 md:grid-cols-3 lg:grid-cols-3 justify-items-center">
               {[
                 {
                   name: "Anuj Chokhani",
@@ -535,7 +535,7 @@ export default function LandingPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="flex flex-col items-center text-center"
+                  className="flex flex-col items-center text-center max-w-xs"
                 >
                   <div className="relative mb-4 w-40 h-40 rounded-full overflow-hidden border-4 border-background shadow-lg">
                     <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" />

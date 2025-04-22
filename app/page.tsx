@@ -191,9 +191,7 @@ export default function LandingPage() {
             </a>*/}
 
             <a
-              href={jobOpeningsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/careers"
               className="inline-flex items-center justify-center rounded-full border border-red-500 px-4 py-1.5 text-sm font-medium text-red-500 transition-colors hover:bg-red-500 hover:text-white"
             >
               <Briefcase className="mr-1.5 size-4" />
@@ -262,9 +260,7 @@ export default function LandingPage() {
                 FAQ
               </a>
               <a
-                href={jobOpeningsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/careers"
                 className="inline-flex items-center justify-center rounded-full border border-red-500 px-4 py-1.5 text-sm font-medium text-red-500 transition-colors hover:bg-red-500 hover:text-white"
               >
                 <Briefcase className="mr-1.5 size-4" />
@@ -1072,9 +1068,7 @@ export default function LandingPage() {
                 </li>
                 <li>
                   <a
-                    href={jobOpeningsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="/careers"
                     className="text-muted-foreground hover:text-foreground transition-colors"
                   >
                     Careers

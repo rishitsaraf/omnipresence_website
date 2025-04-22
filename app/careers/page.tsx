@@ -1,0 +1,275 @@
+"use client"
+
+import type React from "react"
+import { useState, useEffect } from "react"
+import { motion } from "framer-motion"
+import { Briefcase, ArrowRight, Check } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { HiringBanner } from "@/components/ui/hiring-banner"
+
+export default function CareersPage() {
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  const jobOpenings = [
+    {
+        title: "Backend Developer",
+        type: "Full-time",
+        location: "On-Site - Mumbai",
+        description: "Join our backend team to build scalable and efficient server-side applications.",
+        requirements: [
+          "3+ years of experience with Node.js and TypeScript",
+          "Experience with databases (PostgreSQL, MongoDB)",
+          "Knowledge of API design and microservices",
+          "Understanding of cloud platforms (AWS, GCP)"
+        ],
+        descriptionLink: "https://proud-drizzle-19a.notion.site/Senior-Backend-Engineer-1c585312744d8038910fe2ab3c05f6d1?pvs=74",
+        applyLink: "https://airtable.com/appGcx6z1sg5SQHMt/pagk76zOt1xxJjXj9/form"
+      },
+    {
+      title: "Frontend Developer",
+      type: "Full-time",
+      location: "On-Site - Mumbai",
+      description: "We're looking for a skilled Frontend Developer to join our team and help build beautiful, responsive user interfaces.",
+      requirements: [
+        "3+ years of experience with React and TypeScript",
+        "Strong understanding of modern CSS and responsive design",
+        "Experience with Next.js and Tailwind CSS",
+        "Familiarity with UI/UX principles"
+      ],
+      descriptionLink: "https://proud-drizzle-19a.notion.site/Senior-Frontend-Engineer-1dd85312744d80b3835cd3c0f9786118?pvs=74",
+      applyLink: "https://airtable.com/appGcx6z1sg5SQHMt/pagk76zOt1xxJjXj9/form"
+    }
+  ]
+
+  return (
+    <div className="flex min-h-[100dvh] flex-col">
+      <HiringBanner />
+      <header
+        className={`sticky top-0 z-50 w-full backdrop-blur-lg transition-all duration-300 ${isScrolled ? "bg-background/80 shadow-sm" : "bg-transparent"}`}
+      >
+        <div className="container flex h-16 items-center justify-between">
+          <div className="flex items-center gap-2 font-bold">
+            <div className="size-8 rounded-lg bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-primary-foreground">
+              *
+            </div>
+            <span>Omnipresence</span>
+          </div>
+          <nav className="hidden lg:flex gap-8">
+            <a
+              href="/"
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            >
+              Home
+            </a>
+            <a
+              href="/#about"
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            >
+              About Us
+            </a>
+            <a
+              href="/#team"
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            >
+              Team
+            </a>
+            <a
+              href="/#features"
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            >
+              Features
+            </a>
+            <a
+              href="/careers"
+              className="inline-flex items-center justify-center rounded-full border border-red-500 px-4 py-1.5 text-sm font-medium text-red-500 transition-colors hover:bg-red-500 hover:text-white"
+            >
+              <Briefcase className="mr-1.5 size-4" />
+              We're Hiring
+            </a>
+          </nav>
+          <div className="hidden lg:flex gap-4 items-center">
+            <a
+              href="https://cal.com/rishit-saraf/15min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            >
+              Request a Demo
+            </a>
+            <Button className="rounded-full">
+              <a href="https://airtable.com/apprMuGq7H2PLZLaM/pagteuliPy0CSMm0D/form" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
+                Join The Waitlist
+                <ArrowRight className="size-4" />
+              </a>
+            </Button>
+          </div>
+        </div>
+      </header>
+
+      <main className="flex-1">
+        {/* Hero Section */}
+        <section className="w-full py-20 md:py-32">
+          <div className="container px-4 md:px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-center max-w-3xl mx-auto mb-12"
+            >
+              <Badge variant="secondary">
+                Careers
+              </Badge>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+                Join Our Team
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+                We're looking for talented individuals to help us build the future of B2B commerce.
+              </p>
+            </motion.div>
+
+            {/* Job Listings */}
+            <div className="grid gap-6 md:grid-cols-2 max-w-3xl mx-auto">
+              {jobOpenings.map((job, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                >
+                  <Card className="h-full overflow-hidden border-border/40 bg-gradient-to-b from-background to-muted/10 backdrop-blur transition-all hover:shadow-md">
+                    <CardContent className="p-6 flex flex-col h-full">
+                      <div className="flex items-center gap-2 mb-4">
+                        <Badge variant="outline">{job.type}</Badge>
+                        <Badge variant="outline">{job.location}</Badge>
+                      </div>
+                      <h3 className="text-xl font-bold mb-2">{job.title}</h3>
+                      <p className="text-muted-foreground mb-4">{job.description}</p>
+                      <div className="space-y-2 mb-6">
+                        {job.requirements.map((req, j) => (
+                          <div key={j} className="flex items-start gap-2">
+                            <Check className="mt-1 size-4 text-primary flex-shrink-0" />
+                            <span className="text-sm text-muted-foreground">{req}</span>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="flex flex-col gap-3 mt-auto">
+                        <Button variant="outline" className="w-full">
+                          <a 
+                            href={job.descriptionLink}
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center w-full"
+                          >
+                            View Job Description
+                          </a>
+                        </Button>
+                        <Button className="w-full">
+                          <a 
+                            href={job.applyLink}
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center w-full"
+                          >
+                            Apply Now
+                          </a>
+                        </Button>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer className="w-full border-t bg-background/95 backdrop-blur-sm">
+        <div className="container flex flex-col gap-8 px-4 py-10 md:px-6 lg:py-16">
+          <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
+            <div className="space-y-4">
+              <div className="flex items-center gap-2 font-bold">
+                <div className="size-8 rounded-lg bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-primary-foreground">
+                  *
+                </div>
+                <span>Omnipresence</span>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                Streamline your operations. Boost your bottom line. Get started with Omnipresence today.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <h4 className="text-sm font-bold">Company</h4>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <a
+                    href="/#about"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/#team"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    Team
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/careers"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    Careers
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.freeprivacypolicy.com/live/359acacd-a8c1-42bc-9345-17ec85c4473f" className="text-muted-foreground hover:text-foreground transition-colors">
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.freeprivacypolicy.com/live/2165b82f-54af-43b7-9122-19fce53a5e9d" className="text-muted-foreground hover:text-foreground transition-colors">
+                    Terms of Service
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="flex flex-col gap-4 sm:flex-row justify-between items-center border-t border-border/40 pt-8">
+            <p className="text-xs text-muted-foreground">
+              &copy; {new Date().getFullYear()} Omnipresence. All rights reserved.
+            </p>
+            <div className="flex gap-4">
+              <a href="https://www.freeprivacypolicy.com/live/359acacd-a8c1-42bc-9345-17ec85c4473f" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+                Privacy Policy
+              </a>
+              <a href="https://www.freeprivacypolicy.com/live/2165b82f-54af-43b7-9122-19fce53a5e9d" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+                Terms of Service
+              </a>
+              <a href="https://www.freeprivacypolicy.com/live/359acacd-a8c1-42bc-9345-17ec85c4473f" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+                Cookie Policy
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
+} 

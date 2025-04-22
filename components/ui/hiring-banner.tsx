@@ -42,7 +42,7 @@ export function HiringBanner() {
                   variant="secondary"
                   size="sm"
                   className="bg-white text-red-500 hover:bg-white/90"
-                  onClick={() => window.open("https://proud-drizzle-19a.notion.site/Careers-1dd85312744d80f3be77f594fa642a03", "_blank")}
+                  onClick={() => window.open("/careers", "_blank")}
                 >
                   View Roles
                 </Button>

@@ -351,7 +351,7 @@ export default function LandingPage() {
                   width={1280}
                   height={720}
                   alt="Omnipresence dashboard"
-                  className="w-full h-auto"
+                  className={`w-full h-auto ${theme === 'dark' ? 'invert' : ''}`}
                   priority
                 />
                 <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-black/10 dark:ring-white/10"></div>
@@ -375,7 +375,7 @@ export default function LandingPage() {
                     alt={`Company logo ${i}`}
                     width={160}
                     height={80}
-                    className="h-12 w-auto opacity-70 grayscale transition-all hover:opacity-100 hover:grayscale-0"
+                    className={`h-12 w-auto opacity-70 grayscale transition-all hover:opacity-100 hover:grayscale-0 ${theme === 'dark' ? 'invert' : ''}`}
                   />
                 ))}
               </div>

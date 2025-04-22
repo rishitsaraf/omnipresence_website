@@ -35,16 +35,16 @@ export function HiringBanner() {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
                 <span className="font-medium">🚀 We're Hiring for Engineers!</span>
-                <span>Full-time Backend Engineer</span>
+                <span>Full-time Backend and Frontend Engineers</span>
               </div>
               <div className="flex items-center gap-4">
                 <Button
                   variant="secondary"
                   size="sm"
                   className="bg-white text-red-500 hover:bg-white/90"
-                  onClick={() => window.open("https://proud-drizzle-19a.notion.site/Senior-Backend-Engineer-Core-Team-1c585312744d8038910fe2ab3c05f6d1?pvs=74", "_blank")}
+                  onClick={() => window.open("https://proud-drizzle-19a.notion.site/Careers-1dd85312744d80f3be77f594fa642a03", "_blank")}
                 >
-                  View Job 
+                  View Roles
                 </Button>
                 <button
                   onClick={handleClose}

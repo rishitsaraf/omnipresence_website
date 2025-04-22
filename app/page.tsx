@@ -44,7 +44,7 @@ export default function LandingPage() {
   const toRef = useRef<HTMLDivElement>(null)
 
   // External link for job openings - can be changed to any URL
-  const jobOpeningsUrl = "https://proud-drizzle-19a.notion.site/Senior-Backend-Engineer-Core-Team-1c585312744d8038910fe2ab3c05f6d1?pvs=74"
+  const jobOpeningsUrl = "https://proud-drizzle-19a.notion.site/Careers-1dd85312744d80f3be77f594fa642a03"
 
   useEffect(() => {
     setMounted(true)

@@ -9,6 +9,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { HiringBanner } from "@/components/ui/hiring-banner"
 import { useTheme } from "next-themes"
+import { Toaster, toast } from "sonner"
 
 export default function CareersPage() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -65,8 +66,35 @@ export default function CareersPage() {
     }
   ]
 
+  const handleJobClick = (type: 'description' | 'apply', jobTitle: string) => {
+    // Store in session storage
+    const key = `job_${type}_${jobTitle.toLowerCase().replace(/\s+/g, '_')}`
+    if (!sessionStorage.getItem(key)) {
+      sessionStorage.setItem(key, 'true')
+      toast(`Thank you for your interest in the ${jobTitle} position!`, {
+        duration: 4000,
+        position: 'bottom-right',
+        style: {
+          background: 'hsl(var(--background))',
+          color: 'hsl(var(--foreground))',
+          border: '1px solid hsl(var(--border))',
+        },
+      })
+    }
+  }
+
   return (
     <div className="flex min-h-[100dvh] flex-col">
+      <Toaster 
+        position="bottom-right"
+        toastOptions={{
+          style: {
+            background: 'hsl(var(--background))',
+            color: 'hsl(var(--foreground))',
+            border: '1px solid hsl(var(--border))',
+          },
+        }}
+      />
       <HiringBanner />
       <header
         className={`sticky top-0 z-50 w-full backdrop-blur-lg transition-all duration-300 ${isScrolled ? "bg-background/80 shadow-sm" : "bg-transparent"}`}
@@ -234,7 +262,11 @@ export default function CareersPage() {
                         ))}
                       </div>
                       <div className="flex flex-col gap-3 mt-auto">
-                        <Button variant="outline" className="w-full">
+                        <Button 
+                          variant="outline" 
+                          className="w-full"
+                          onClick={() => handleJobClick('description', job.title)}
+                        >
                           <a 
                             href={job.descriptionLink}
                             target="_blank" 
@@ -244,7 +276,10 @@ export default function CareersPage() {
                             View Job Description
                           </a>
                         </Button>
-                        <Button className="w-full">
+                        <Button 
+                          className="w-full"
+                          onClick={() => handleJobClick('apply', job.title)}
+                        >
                           <a 
                             href={job.applyLink}
                             target="_blank" 

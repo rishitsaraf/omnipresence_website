@@ -3,17 +3,21 @@
 import type React from "react"
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { Briefcase, ArrowRight, Check, Menu, X } from "lucide-react"
+import { Briefcase, ArrowRight, Check, Menu, X, Moon, Sun } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { HiringBanner } from "@/components/ui/hiring-banner"
+import { useTheme } from "next-themes"
 
 export default function CareersPage() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
     const handleScroll = () => {
       if (window.scrollY > 10) {
         setIsScrolled(true)
@@ -25,6 +29,10 @@ export default function CareersPage() {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark")
+  }
 
   const jobOpenings = [
     {
@@ -104,6 +112,10 @@ export default function CareersPage() {
             </a>
           </nav>
           <div className="hidden lg:flex gap-4 items-center">
+            <Button variant="ghost" size="icon" onClick={toggleTheme} className="rounded-full">
+              {mounted && theme === "dark" ? <Sun className="size-[18px]" /> : <Moon className="size-[18px]" />}
+              <span className="sr-only">Toggle theme</span>
+            </Button>
             <a
               href="https://cal.com/rishit-saraf/15min"
               target="_blank"
@@ -120,6 +132,10 @@ export default function CareersPage() {
             </Button>
           </div>
           <div className="flex items-center gap-4 lg:hidden">
+            <Button variant="ghost" size="icon" onClick={toggleTheme} className="rounded-full">
+              {mounted && theme === "dark" ? <Sun className="size-[18px]" /> : <Moon className="size-[18px]" />}
+              <span className="sr-only">Toggle theme</span>
+            </Button>
             <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
               {mobileMenuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
               <span className="sr-only">Toggle menu</span>
@@ -172,7 +188,8 @@ export default function CareersPage() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="w-full py-20 md:py-32">
+        <section className="w-full py-20 md:py-32 relative overflow-hidden">
+          <div className="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-black bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#1f1f1f_1px,transparent_1px),linear-gradient(to_bottom,#1f1f1f_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
           <div className="container px-4 md:px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

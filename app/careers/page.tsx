@@ -3,7 +3,7 @@
 import type React from "react"
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { Briefcase, ArrowRight, Check } from "lucide-react"
+import { Briefcase, ArrowRight, Check, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -11,6 +11,7 @@ import { HiringBanner } from "@/components/ui/hiring-banner"
 
 export default function CareersPage() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -118,7 +119,55 @@ export default function CareersPage() {
               </a>
             </Button>
           </div>
+          <div className="flex items-center gap-4 lg:hidden">
+            <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+              {mobileMenuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
+              <span className="sr-only">Toggle menu</span>
+            </Button>
+          </div>
         </div>
+        {/* Mobile menu */}
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="lg:hidden absolute top-16 inset-x-0 bg-background/95 backdrop-blur-lg border-b"
+          >
+            <div className="container py-4 flex flex-col gap-4">
+              <a href="/" className="py-2 text-sm font-medium">
+                Home
+              </a>
+              <a href="/#about" className="py-2 text-sm font-medium">
+                About Us
+              </a>
+              <a href="/#team" className="py-2 text-sm font-medium">
+                Team
+              </a>
+              <a href="/#features" className="py-2 text-sm font-medium">
+                Features
+              </a>
+              <a
+                href="/careers"
+                className="inline-flex items-center justify-center rounded-full border border-red-500 px-4 py-1.5 text-sm font-medium text-red-500 transition-colors hover:bg-red-500 hover:text-white"
+              >
+                <Briefcase className="mr-1.5 size-4" />
+                We're Hiring
+              </a>
+              <div className="flex flex-col gap-2 pt-2 border-t">
+                <a href="https://cal.com/rishit-saraf/15min" target="_blank" rel="noopener noreferrer" className="py-2 text-sm font-medium">
+                  Request a Demo
+                </a>
+                <Button className="rounded-full">
+                  <a href="https://airtable.com/apprMuGq7H2PLZLaM/pagteuliPy0CSMm0D/form" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
+                    Join The Waitlist
+                    <ArrowRight className="size-4" />
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </motion.div>
+        )}
       </header>
 
       <main className="flex-1">

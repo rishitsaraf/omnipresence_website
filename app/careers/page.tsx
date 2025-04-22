@@ -37,21 +37,21 @@ export default function CareersPage() {
 
   const jobOpenings = [
     {
-        title: "Backend Developer",
+        title: "Senior Backend Engineer",
         type: "Full-time",
         location: "On-Site - Mumbai",
-        description: "Join our backend team to build scalable and efficient server-side applications.",
+        description: "Join our team to build scalable and efficient server-side applications.",
         requirements: [
           "3+ years of experience with Node.js and TypeScript",
           "Experience with databases (PostgreSQL, MongoDB)",
           "Knowledge of API design and microservices",
-          "Understanding of cloud platforms (AWS, GCP)"
+          "Understanding of DevOps"
         ],
         descriptionLink: "https://proud-drizzle-19a.notion.site/Senior-Backend-Engineer-1c585312744d8038910fe2ab3c05f6d1?pvs=74",
         applyLink: "https://airtable.com/appGcx6z1sg5SQHMt/pagk76zOt1xxJjXj9/form"
       },
     {
-      title: "Frontend Developer",
+      title: "Senior Frontend Engineer",
       type: "Full-time",
       location: "On-Site - Mumbai",
       description: "We're looking for a skilled Frontend Developer to join our team and help build beautiful, responsive user interfaces.",

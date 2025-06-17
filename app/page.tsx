@@ -351,7 +351,7 @@ export default function LandingPage() {
                   width={1280}
                   height={720}
                   alt="Omnipresence dashboard"
-                  className={`w-full h-auto ${theme === 'dark' ? 'invert' : ''}`}
+                  className={`w-full h-auto ${mounted && theme === 'dark' ? 'invert' : ''}`}
                   priority
                 />
                 <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-black/10 dark:ring-white/10"></div>
@@ -367,7 +367,6 @@ export default function LandingPage() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <p className="text-sm font-medium text-muted-foreground">Backed by</p>
-              <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16">
                 {[1, 2].map((i) => (
                   <Image
                     key={i}
@@ -375,14 +374,12 @@ export default function LandingPage() {
                     alt={`Company logo ${i}`}
                     width={160}
                     height={80}
-                    className={`h-12 w-auto opacity-70 grayscale transition-all hover:opacity-100 hover:grayscale-0 ${theme === 'dark' ? 'invert' : ''}`}
+                  className={`h-12 w-auto opacity-70 grayscale transition-all hover:opacity-100 hover:grayscale-0 ${mounted && theme === 'dark' ? 'invert' : ''}`}
                   />
                 ))}
               </div>
             </div>
-          </div>
         </section>
-
         {/* About Us Section */}
         <section id="about" className="w-full py-20 md:py-32 relative overflow-hidden">
           <div className="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-black bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#1f1f1f_1px,transparent_1px),linear-gradient(to_bottom,#1f1f1f_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_40%,transparent_100%)]"></div>
@@ -501,8 +498,9 @@ export default function LandingPage() {
             </motion.div>
 
             <div className="grid gap-8 md:grid-cols-3 lg:grid-cols-3 justify-items-center">
-              {[
-                {
+
+
+              {[{
                   name: "Anuj Chokhani",
                   role: "CEO Kuloday",
                   bio: "Executive with 15+ years of experience in manufacturing and exports.",
@@ -523,7 +521,7 @@ export default function LandingPage() {
                   image: "/rishit.avif",
                   linkedin: "https://www.linkedin.com/in/rishit-saraf/",
                 },
-                
+
               ].map((member, i) => (
                 <motion.div
                   key={i}
@@ -651,9 +649,8 @@ export default function LandingPage() {
             <div className="grid md:grid-cols-3 gap-8 md:gap-12 relative">
               <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-border to-transparent -translate-y-1/2 z-0"></div>
 
-              {[
-                {
-                  step: "01",
+              {[{
+                step: "01",
                   title: "Create Your Business Profile",
                   description: "Sign up in seconds with just your email. No credit card required to get started.",
                 },
@@ -687,7 +684,7 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Testimonials Section 
+        {/* Testimonials Section */}
         <section id="testimonials" className="w-full py-20 md:py-32">
           <div className="container px-4 md:px-6">
             <motion.div
@@ -707,9 +704,8 @@ export default function LandingPage() {
             </motion.div>
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {[
-                {
-                  quote:
+              {[{
+                quote:
                     "Omnipresence has transformed how we manage our projects. The automation features have saved us countless hours of manual work.",
                   author: "Sarah Johnson",
                   role: "Project Manager, TechCorp",
@@ -783,9 +779,9 @@ export default function LandingPage() {
               ))}
             </div>
           </div>
-        </section> */}
+        </section>
 
-        {/* FAQ Section 
+        {/* FAQ Section */}
         <section id="faq" className="w-full py-20 md:py-32">
           <div className="container px-4 md:px-6">
             <motion.div
@@ -806,8 +802,7 @@ export default function LandingPage() {
 
             <div className="mx-auto max-w-3xl">
               <Accordion type="single" collapsible className="w-full">
-                {[
-                  {
+                {[{
                     question: "How does the 14-day free trial work?",
                     answer:
                       "Our 14-day free trial gives you full access to all features of your selected plan. No credit card is required to sign up, and you can cancel at any time during the trial period with no obligation.",
@@ -856,7 +851,7 @@ export default function LandingPage() {
               </Accordion>
             </div>
           </div>
-        </section> */}
+        </section>
 
         {/* CTA Section */}
         <section
@@ -1043,6 +1038,7 @@ export default function LandingPage() {
                   </a>
                 </li>
               </ul>
+
             </div> */}
 
             <div className="space-y-4">

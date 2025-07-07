@@ -35,7 +35,7 @@ export function HiringBanner() {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
                 <span className="font-medium">🚀 We're Hiring for Interns!</span>
-                <span>E-commerce and Marketing Interns</span>
+                <span>UI/UX & Front-End Intern (Founder’s Office)</span>
               </div>
               <div className="flex items-center gap-4">
                 <Button

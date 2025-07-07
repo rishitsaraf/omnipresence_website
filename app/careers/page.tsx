@@ -36,37 +36,65 @@ export default function CareersPage() {
   }
 
   const jobOpenings = [
-     {
-  title: "E-Commerce & Digital Marketing Intern (Founder’s Office)",
-  type: "Internship",
-  location: "On-Site - Mumbai",
-  description: "Work directly with the founding team to support e-commerce operations and digital marketing initiatives across marketplaces and social platforms.",
-  responsibilities: [
-    "Assist in managing and optimizing e-commerce platforms (Shopify, marketplaces, etc.)",
-    "Support content planning and scheduling across social media platforms",
-    "Help execute digital marketing campaigns (organic and paid)",
-    "Track marketing metrics and assist in reporting",
-    "Support email marketing tasks including setup and segmentation",
-    "Conduct market research and competitor benchmarking",
-    "Assist in website updates and creation of marketing content"
-  ],
-  requirements: [
-    "Pursuing a degree in Marketing, Business, Communications, or related field",
-    "Strong interest in e-commerce and digital marketing",
-    "Good written and verbal communication skills",
-    "Familiarity with social media platforms and content formats",
-    "Basic understanding of SEO, analytics, and marketing funnels",
-    "Detail-oriented and able to manage multiple tasks"
-  ],
-  preferredSkills: [
-    "Experience with Shopify or WooCommerce",
-    "Exposure to email marketing tools (e.g., Mailchimp, Klaviyo)",
-    "Basic graphic design skills (Canva, Figma, Photoshop)",
-    "Familiarity with Google Analytics or Meta Ads Manager"
-  ],
-  descriptionLink: "https://proud-drizzle-19a.notion.site/E-Commerce-Digital-Marketing-Intern-Founder-s-Office-21585312744d80df8fd6f86543eefbc2?pvs=73",  
-  applyLink: "https://airtable.com/appQjmlHtsUUtBhuH/pagpxLLzxVf39yW7D/form"   
-}
+        {
+      title: "UI/UX & Front-End Intern (Founder’s Office)",
+      type: "Internship",
+      location: "On-Site - Mumbai",
+      description: "Join our founding team to design and build clean, user-friendly interfaces for our e-commerce platform. Work across design and front-end development with exposure to product, marketing, and growth.",
+      responsibilities: [
+        "Design wireframes & prototypes (Figma/Adobe XD)",
+        "Build responsive front-end pages (HTML/CSS/JS)",
+        "Improve Shopify storefront UX",
+        "Conduct user research and testing",
+        "Assist with product and marketing tasks"
+      ],
+      requirements: [
+        "Strong eye for UI/UX and attention to detail",
+        "Knowledge of HTML, CSS, JavaScript",
+        "Familiarity with Figma or similar tools",
+        "Interest in e-commerce and digital products",
+        "Bonus: Shopify or Liquid experience"
+      ],
+      preferredSkills: [
+        "Work directly with the founder",
+        "Ship real features seen by users",
+        "Creative freedom and fast feedback",
+        "Learn product, design & marketing hands-on"
+      ],
+      descriptionLink: "https://proud-drizzle-19a.notion.site/Front-End-UI-UX-Intern-Founder-s-Office-Mumbai-22985312744d80f2a325dcb5443a17dc?pvs=74",  
+      applyLink: "https://airtable.com/appQjmlHtsUUtBhuH/pagk76zOt1xxJjXj9/form"   
+    },
+      {
+      title: "E-Commerce & Digital Marketing Intern (Founder’s Office)",
+      type: "Internship",
+      location: "On-Site - Mumbai",
+      description: "Work directly with the founding team to support e-commerce operations and digital marketing initiatives across marketplaces and social platforms.",
+      responsibilities: [
+        "Assist in managing and optimizing e-commerce platforms (Shopify, marketplaces, etc.)",
+        "Support content planning and scheduling across social media platforms",
+        "Help execute digital marketing campaigns (organic and paid)",
+        "Track marketing metrics and assist in reporting",
+        "Support email marketing tasks including setup and segmentation",
+        "Conduct market research and competitor benchmarking",
+        "Assist in website updates and creation of marketing content"
+      ],
+      requirements: [
+        "Pursuing a degree in Marketing, Business, Communications, or related field",
+        "Strong interest in e-commerce and digital marketing",
+        "Good written and verbal communication skills",
+        "Familiarity with social media platforms and content formats",
+        "Basic understanding of SEO, analytics, and marketing funnels",
+        "Detail-oriented and able to manage multiple tasks"
+      ],
+      preferredSkills: [
+        "Experience with Shopify or WooCommerce",
+        "Exposure to email marketing tools (e.g., Mailchimp, Klaviyo)",
+        "Basic graphic design skills (Canva, Figma, Photoshop)",
+        "Familiarity with Google Analytics or Meta Ads Manager"
+      ],
+      descriptionLink: "https://proud-drizzle-19a.notion.site/E-Commerce-Digital-Marketing-Intern-Founder-s-Office-21585312744d80df8fd6f86543eefbc2?pvs=73",  
+      applyLink: "https://airtable.com/appQjmlHtsUUtBhuH/pagpxLLzxVf39yW7D/form"   
+    }
 
   ]
 

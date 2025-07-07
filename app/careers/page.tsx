@@ -82,9 +82,7 @@ export default function CareersPage() {
         "Pursuing a degree in Marketing, Business, Communications, or related field",
         "Strong interest in e-commerce and digital marketing",
         "Good written and verbal communication skills",
-        "Familiarity with social media platforms and content formats",
         "Basic understanding of SEO, analytics, and marketing funnels",
-        "Detail-oriented and able to manage multiple tasks"
       ],
       preferredSkills: [
         "Experience with Shopify or WooCommerce",
